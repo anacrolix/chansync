@@ -4,6 +4,8 @@ import (
 	"sync"
 )
 
+// Flag wraps a boolean value that starts as false (off). You can wait for it to be on or off, and
+// set the value as needed.
 type Flag struct {
 	mu     sync.Mutex
 	on     chan struct{}
