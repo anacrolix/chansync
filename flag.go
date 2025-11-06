@@ -61,11 +61,11 @@ func (me *Flag) init() {
 	me.inited = true
 }
 
-func (me *Flag) SetBool(b bool) {
+func (me *Flag) SetBool(b bool) (changed bool) {
 	if b {
-		me.Set()
+		return me.Set()
 	} else {
-		me.Clear()
+		return me.Clear()
 	}
 }
 
